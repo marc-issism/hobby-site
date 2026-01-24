@@ -1,0 +1,20 @@
+/* POLAROID */
+:root {
+  --polaroid-width: 160px;
+  --polaroid-height: calc(1.7 * var(--polaroid-width));
+  --polaroid-image-width: calc(0.85 * var(--polaroid-width));
+  --polaroid-image-height: calc(1.49 * var(--polaroid-image-width));;
+  --polaroid-mt: calc(0.1 * var(--polaroid-width));
+}
+
+.polaroid {
+  border: 3px solid black;
+  height: var(--polaroid-height);
+  width: var(--polaroid-width);
+}
+.polaroid-image {
+  border: 3px solid black;
+  margin-top: var(--polaroid-mt);
+  height: var(--polaroid-image-height);
+  width: var(--polaroid-image-width);
+}
