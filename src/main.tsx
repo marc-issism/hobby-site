@@ -5,7 +5,7 @@ import App from './App.tsx'
 
 createRoot(document.getElementById('root')!).render(
   // Use StrictMode for dev only
-  <>
+  <StrictMode>
     <App />
-  </>,
+  </StrictMode>,
 )

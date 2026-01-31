@@ -3,8 +3,8 @@ import Navbar from "../components/Navbar";
 function Home() {
 return(
   <>
-    This is the homepage<br/>
     <Navbar/>
+    This is the homepage<br/>
   </>
 );}
 

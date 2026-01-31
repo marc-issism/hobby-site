@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import Navbar from './components/Navbar.tsx';
+import './css/main.css'
 
 import Home from './pages/Home.tsx';
 import Photography from './pages/Photography.tsx';
@@ -15,15 +15,12 @@ function App() {
     <>
       <Router>
         <Routes>
-
           <Route path='/' element={<Home/>}></Route>
           <Route path='/photography' element={<Photography/>}></Route>
           <Route path='/transit' element={<Transit/>}></Route>
           <Route path='/languages' element={<Languages/>}></Route>
           <Route path='/coffee' element={<Coffee/>}></Route>
           <Route path='/gaming' element={<Gaming/>}></Route>
-
-
         </Routes>
       </Router>
     </>
