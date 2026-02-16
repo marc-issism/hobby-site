@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom'
 
 import './css/main.css'
 
@@ -8,19 +8,32 @@ import Transit from './pages/Transit.tsx';
 import Languages from './pages/Languages.tsx';
 import Coffee from './pages/Coffee.tsx';
 import Gaming from './pages/Gaming.tsx';
+import Navbar from './components/Navbar.tsx';
 
+
+function AppContainer() {
+  return(
+    <div>
+      <Navbar/>
+      <Outlet/>
+    </div>
+  );
+}
 
 function App() {
   return(
     <>
-      <Router>
+      <Router basename={"/hobby-site/"}>
         <Routes>
-          <Route path='/' element={<Home/>}></Route>
-          <Route path='/photography' element={<Photography/>}></Route>
-          <Route path='/transit' element={<Transit/>}></Route>
-          <Route path='/languages' element={<Languages/>}></Route>
-          <Route path='/coffee' element={<Coffee/>}></Route>
-          <Route path='/gaming' element={<Gaming/>}></Route>
+          <Route path='/' element={<AppContainer/>}> 
+            <Route index element={<Home/>}/>
+            <Route path='/photography' element={<Photography/>}/>
+            <Route path='/transit' element={<Transit/>}/>
+            <Route path='/languages' element={<Languages/>}/>
+            <Route path='/coffee' element={<Coffee/>}/>
+            <Route path='/gaming' element={<Gaming/>}/>
+
+          </Route>
         </Routes>
       </Router>
     </>

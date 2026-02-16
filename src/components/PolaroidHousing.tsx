@@ -16,8 +16,8 @@ function PolaroidHousing(props: polaroidHousingProps)  {
           <div>{props.title}</div>
         </div>
         <div className='polaroid-content'>
-          {props.imageIDs.map((id)=>
-            <Polaroid link={id}/>
+          {props.imageIDs.map((id, index)=>
+            <Polaroid link={id} key={index}/>
           )}
         </div>
         
